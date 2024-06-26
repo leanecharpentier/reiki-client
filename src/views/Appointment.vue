@@ -48,8 +48,8 @@
                 <label for="message">Message</label>
                 <textarea id="message" placeholder="Ecris ton message ici..." v-model="message"></textarea>
             </div>
-            <ul>
-                <li class="error" v-for="error in errorsForm">
+            <ul  :class="{ 'error-form-global': errorsForm.length > 0 }">
+                <li v-for="error in errorsForm">
                     {{ error }}
                 </li>
             </ul>
@@ -88,6 +88,17 @@ main {
             align-self: start;
             color: red;
             font-size: 16px;
+        }
+        .error-form-global {
+            background-color: rgb(255, 181, 181);
+            border: 1px solid red;
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            li {
+                list-style-type: none;
+                font-size: 16px
+            }
         }
         button {
             background-color: $jaune-clair;
