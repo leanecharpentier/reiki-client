@@ -4,6 +4,7 @@ import Seances from '../views/Seances.vue';
 import APropos from '../views/APropos.vue';
 import Contact from '../views/Contact.vue';
 import Appointment from '../views/Appointment.vue';
+import Confirmation from '../views/Confirmation.vue';
 import Admin from '../views/Admin.vue';
 
 const routes = [
@@ -26,6 +27,16 @@ const routes = [
     path: '/contact',
     name: 'Contact',
     component: Contact
+  },
+  {
+    path: '/rendez-vous',
+    name: 'Rendez-vous',
+    component: Appointment
+  },
+  {
+    path: '/confirmation',
+    name: 'Confirmation',
+    component: Confirmation
   },
   {
     path: '/rendez-vous',
