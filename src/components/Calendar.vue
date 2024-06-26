@@ -40,6 +40,13 @@ export default {
                 ],
                 slotMinTime: '09:00:00',
                 slotMaxTime: '18:00:00',
+                slotDuration: '00:30:00',
+                slotLabelInterval: { hours: 1 },
+                nowIndicator: true,
+                displayEventEnd: false,
+                events: [],
+                eventClick: this.handleEventClick
+            },
             appointmentsList: []
         }
     },
