@@ -7,6 +7,7 @@ import Appointment from '../views/Appointment.vue';
 import ConfirmationAppointment from '../views/ConfirmationAppointment.vue';
 import ConfirmationContact from '../views/ConfirmationContact.vue';
 import Admin from '../views/Admin.vue';
+import Messages from '../views/Messages.vue';
 
 const routes = [
   {
@@ -48,6 +49,11 @@ const routes = [
     path: '/admin',
     name: 'Admin',
     component: Admin
+  },
+  {
+    path: '/admin/messages',
+    name: 'Messages',
+    component: Messages
   }
 ];
 

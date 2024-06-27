@@ -1,6 +1,7 @@
 <script setup>
     import AppointmentSingle from '../components/AppointmentSingle.vue';
     import Calendar from '../components/Calendar.vue';
+    import HeaderAdmin from '../components/HeaderAdmin.vue';
 </script>
 
 <script>
@@ -35,9 +36,7 @@
 </script>
 
 <template>
-	<header>
-		<h1>Interface Administrateur</h1>
-	</header>
+	<HeaderAdmin />
 	<main>
 		<h2>Gérer mes réservations</h2>
 		<div class="container">
@@ -68,9 +67,6 @@
 <style lang="scss" scoped>
 @import "../assets/styles.scss";
 
-h1 {
-		@include title;
-}
 main {
 	width: 90vw;
 	margin: auto;

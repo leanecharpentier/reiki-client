@@ -136,10 +136,30 @@ export default {
     },
 
     methods: {
-        handleSubmit() {
+        async handleSubmit() {
             this.validateForm();
+            const formData = {
+                name: this.name,
+                firstName: this.firstName,
+                email: this.email,
+                phone: this.phone,
+                message: this.message
+            };
             if (this.errorsForm.length === 0) {
                 try {
+                    const response = await fetch('http://localhost:3000/messages', {
+                        method: 'POST',
+                        headers: {
+                        'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`Error: ${response.statusText}`);
+                    }
+                    const data = await response.json();
+                    console.log('Success:', data);
                     this.$router.push('/contact/confirmation');
                 } catch (error) {
                     console.error('Erreur:', error);
