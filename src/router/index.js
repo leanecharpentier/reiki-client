@@ -4,7 +4,8 @@ import Seances from '../views/Seances.vue';
 import APropos from '../views/APropos.vue';
 import Contact from '../views/Contact.vue';
 import Appointment from '../views/Appointment.vue';
-import Confirmation from '../views/Confirmation.vue';
+import ConfirmationAppointment from '../views/ConfirmationAppointment.vue';
+import ConfirmationContact from '../views/ConfirmationContact.vue';
 import Admin from '../views/Admin.vue';
 
 const routes = [
@@ -29,19 +30,19 @@ const routes = [
     component: Contact
   },
   {
-    path: '/rendez-vous',
-    name: 'Rendez-vous',
-    component: Appointment
-  },
-  {
-    path: '/confirmation',
-    name: 'Confirmation',
-    component: Confirmation
+    path: '/contact/confirmation',
+    name: 'ConfirmationAppointment',
+    component: ConfirmationAppointment
   },
   {
     path: '/rendez-vous',
     name: 'Rendez-vous',
     component: Appointment
+  },
+  {
+    path: '/rendez-vous/confirmation',
+    name: 'ConfirmationContact',
+    component: ConfirmationContact
   },
   {
     path: '/admin',

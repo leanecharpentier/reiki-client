@@ -7,7 +7,7 @@
 				<li><router-link to="/seances">Séances</router-link></li>
 				<li><router-link to="/a-propos">A propos</router-link></li>
 				<li><router-link to="/contact">Contact</router-link></li>
-				<li><router-link class="btn-rdv" to="/rendez-vous">Prendre rendez-vous</router-link></li>
+				<li class="btn-rdv"><router-link to="/rendez-vous">Prendre rendez-vous</router-link></li>
 			</ul>
 		</nav>
 	</header>
@@ -30,17 +30,19 @@ header {
 			gap: 25px;
 			li {
 				list-style: none;
-				.btn-rdv {
-					background-color: $jaune-clair;
-					padding: 10px 20px;
-					border-radius: 50px;
-					border: 2px solid $jaune-clair;
-					transition: .3s all ease-in-out;
-				}
-				.btn-rdv:hover {
-					background-color: white;
-					border: 2px solid $jaune-fonce;
-				}
+				display: flex;
+			}
+			.btn-rdv {
+				text-align: center;
+				background-color: $vert;
+				padding: 10px 20px;
+				border-radius: 50px;
+				color: white;
+				transition: .3s all ease-in-out;
+			}
+			.btn-rdv:hover {
+				background-color: $beige;
+				color: black;
 			}
 		}
 	}

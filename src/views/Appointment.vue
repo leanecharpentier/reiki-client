@@ -101,16 +101,15 @@ main {
             }
         }
         button {
-            background-color: $jaune-clair;
-            border: 2px solid $jaune-clair;
+            background-color: $vert;
             padding: 10px 20px;
             border-radius: 10px;
             width: fit-content;
+            border: none;
             transition: all .3s ease-in-out;
         }
         button:hover {
-            background-color: $jaune-fonce;
-            border: 2px solid $jaune-fonce;
+            background-color: $beige;
         }
     }
 }
@@ -186,7 +185,7 @@ export default {
                     }
                     const data = await response.json();
                     console.log('Success:', data);
-                    this.$router.push('/confirmation');
+                    this.$router.push('/rendez-vous/confirmation');
                 } catch (error) {
                     console.error('Erreur:', error);
                 }

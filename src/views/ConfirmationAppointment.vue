@@ -1,14 +1,14 @@
 <script setup>
     import HeaderContent from '../components/HeaderContent.vue';
     import FooterContent from '../components/FooterContent.vue';
+    import Confirmation from '../components/Confirmation.vue';
 </script>
 
 <template>
     <HeaderContent />
     <main>
         <h1>Confirmation</h1>
-        <p>Votre demande de rendez-vous a bien été prise en compte.</p>
-        <p>Je vais vérifier la disponibilité de ce créaneau et vous donner réponse dans les plus brefs délais.</p>
+        <Confirmation msg="Votre demande de rendez-vous a bien été prise en compte." msg2="Je vais vérifier la disponibilité de ce créaneau et vous donner réponse dans les plus brefs délais."/>
     </main>
     <FooterContent />
 </template>
